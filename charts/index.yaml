@@ -3,7 +3,7 @@ entries:
   sentry-custom:
   - apiVersion: v2
     appVersion: 24.1.1
-    created: "2024-02-06T09:05:37.075708044Z"
+    created: "2024-02-06T09:07:31.671987668Z"
     dependencies:
     - condition: sourcemaps.enabled
       name: memcached
@@ -39,7 +39,7 @@ entries:
       repository: oci://registry-1.docker.io/bitnamicharts
       version: 14.2.2
     description: A Helm chart for Kubernetes
-    digest: 88657b7842eddc573ec5258d8ebbf308bf914fe6fdeed36b858e460002ddcd98
+    digest: febb5a4ca9e04785d7c463a7a099b15f0f9012d3f2ce0fb63d74ee0ebfebaa51
     maintainers:
     - name: sentry-kubernetes
     name: sentry-custom
@@ -47,4 +47,4 @@ entries:
     urls:
     - https://ramblurr.github.io/sentry-helm/sentry-custom-21.3.1.tgz
     version: 21.3.1
-generated: "2024-02-06T09:05:37.036957947Z"
+generated: "2024-02-06T09:07:31.632606535Z"
