@@ -25,10 +25,10 @@ jobs:
           git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
           git checkout gh-pages
 
-      - name: Build zips
-        uses: yeouchien/helm3-action@f3a7c239c5c60777210c8e631839edf5dd3fa29c
-        with:
-          command: dep update main/sentry
+          #- name: Build zips
+          #  uses: yeouchien/helm3-action@f3a7c239c5c60777210c8e631839edf5dd3fa29c
+          #  with:
+          #    command: dep update main/sentry
 
       - name: Build zips
         uses: yeouchien/helm3-action@f3a7c239c5c60777210c8e631839edf5dd3fa29c
@@ -54,10 +54,8 @@ jobs:
           directory: gh-pages
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v2
-        env:
-          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: ./gh-pages/charts
+        uses: peaceiris/actions-gh-pages@v3
         with:
           keepFiles: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./gh-pages/charts
