@@ -1418,11 +1418,13 @@ kafka:
   zookeeper:
     enabled: true
   kraft:
-    enabled: false
+    enabled: true
   service:
     ports:
       client: 9092
-
+  listeners:
+    client:
+      protocol: PLAINTEXT
   ## Use this to enable an extra service account
   # serviceAccount:
   #   create: false
