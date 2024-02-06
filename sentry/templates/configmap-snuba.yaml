@@ -60,6 +60,7 @@ data:
           {{- if not .Values.clickhouse.singleNode }}
         "distributed_cluster_name": {{ include "sentry.clickhouse.cluster.name" . | quote }},
           {{- end }}
+        {{- end }}
       },
     ]
 
